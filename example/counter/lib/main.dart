@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-          await context.ofLocker(_countKey).lock(
+          await context.locker(_countKey).lock(
                 () => _incrementCounter(),
               );
         },
