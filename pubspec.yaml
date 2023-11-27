@@ -1,6 +1,8 @@
 name: locker
 description: Locker is a Flutter library to prevent multiple executions of the same action, ideal for avoiding repeated taps.
-version: 1.0.0
+version: 1.0.1
+repository: https://github.com/soraef/locker
+
 
 environment:
   sdk: '>=3.0.6 <4.0.0'

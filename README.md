@@ -66,7 +66,7 @@ Lock your function execution by calling `lock` on the context with the locker ke
 ```dart
 floatingActionButton: FloatingActionButton(
   onPressed: () async {
-    await context.ofLocker(_countKey).lock(
+    await context.locker(_countKey).lock(
       () => _incrementCounter(),
     );
   },
