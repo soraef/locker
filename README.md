@@ -81,7 +81,3 @@ Contributions to Locker are welcome! Feel free to report issues, open a pull req
 ## License
 
 Locker is released under the MIT License. See the LICENSE file for more information.
-
----
-
-Please replace the `^1.0.0` in the installation section with the current version of your Locker library.
