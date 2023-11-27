@@ -76,6 +76,14 @@ extension LockerX on BuildContext {
     return read<Locker>().state[key] == true;
   }
 
+  LockerWithKey locker<T>(LockerKey key) {
+    return LockerWithKey(
+      key: key,
+      locker: read<Locker>(),
+    );
+  }
+
+  @Deprecated("use locker<T>(key)")
   LockerWithKey ofLocker<T>(LockerKey key) {
     return LockerWithKey(
       key: key,
