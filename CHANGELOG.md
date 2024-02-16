@@ -6,3 +6,7 @@
 ## 1.0.1
 
 * Refactor locker extension and deprecate old method
+
+## 1.0.2
+
+* Add LockerButtonBuilder

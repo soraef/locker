@@ -96,15 +96,28 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          await context.locker(_countKey).lock(
-                () => _incrementCounter(),
-              );
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () async {
+      //     await context.locker(_countKey).lock(
+      //           () => _incrementCounter(),
+      //         );
+      //   },
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ),
+
+      // or use LockerButtonBuilder.auto
+      floatingActionButton: LockerButtonBuilder(
+        lockerKey: _countKey,
+        onPressed: () => _incrementCounter(),
+        builder: (context, isLocked, onPressed) {
+          return FloatingActionButton(
+            onPressed: isLocked ? null : onPressed,
+            tooltip: 'Increment',
+            child: const Icon(Icons.add),
+          );
         },
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

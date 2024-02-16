@@ -74,6 +74,22 @@ floatingActionButton: FloatingActionButton(
 ),
 ```
 
+or you can use LockerButtonBuilder.
+
+```dart
+floatingActionButton: LockerButtonBuilder(
+  lockerKey: _countKey,
+  onPressed: () => _incrementCounter(),
+  builder: (context, isLocked, onPressed) {
+    return FloatingActionButton(
+      onPressed: isLocked ? null : onPressed,
+      tooltip: 'Increment',
+      child: const Icon(Icons.add),
+    );
+  },
+), // This trailing comma makes auto-formatting nicer for build methods.
+```
+
 ## Contributing
 
 Contributions to Locker are welcome! Feel free to report issues, open a pull request, or suggest improvements to the documentation.
